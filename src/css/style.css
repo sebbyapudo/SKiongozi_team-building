@@ -11,7 +11,34 @@ Variables
 ===============
 */
 :root {
+  /* colors */
+  --primary-clr: #FFC300;
+  --primary-accent: rgba(255, 195, 0, 0.22);
+  --secondary-clr: #007BFF;
+  --secondary-accent: rgba(0, 123, 255, 0.34);
+  --off-white: #FFFFFF;
+  --black-clr: #000000;
+  --light-grey: #E5E5E5;
 
+  /* darkest grey - used for headings */
+  --grey-clr: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+
+  /* essentials */
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-secondary: 'Comfortaa', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.35rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
 }
 
 /*
@@ -31,11 +58,10 @@ html {
 }
 
 body {
-  /* font-family: ;
-  background: ;
-  color: ;
+  font-family: var(--ff-primary);
+  background: var(--off-white);
   line-height: 1.5;
-  font-size: 0.875rem; */
+  font-size: 0.875rem;
 }
 
 ul {
@@ -95,30 +121,29 @@ p {
 .btn {
   text-transform: uppercase;
   background: transparent;
-  /* color: ; */
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   transition: var(--transition);
   font-size: 0.875rem;
-  /* border: 2px solid var(--clr-black); */
+  border: 2px solid var(--black-clr);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
 }
 .btn:hover {
-  /* color: var(--clr-white); */
-  /* background: var(--clr-black); */
+  color: var(--off-white);
+  background: var(--black-clr);
 }
 .btn-white {
-  /* color: var(--clr-white); */
-  /* border-color: var(--clr-white); */
+  color: var(--off-white);
+  border-color: var(--off-white);
   border-radius: 0;
   padding: 0.5rem 1rem;
 }
 .btn:hover {
-  /* background: var(--clr-white); */
-  /* color: var(--clr-secondary); */
+  background: var(--off-white);
+  color: var(--secondary-clr);
 }
 /* section */
 .section {
@@ -148,8 +173,8 @@ Scroll
 */
 /* navbar */
 nav {
-  background: var(--clr-white);
-  padding: 1rem 1.5rem;
+  background: var(--off-white);
+  padding: 0.01rem 1.5rem;
 }
 /* fixed nav */
 .fixed-nav {
@@ -157,18 +182,18 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-white);
+  background: var(--off-white);
   box-shadow: var(--light-shadow);
 }
 .fixed-nav .links a {
-  color: var(--clr-grey-1);
+  color: var(--grey-clr);
 }
 .fixed-nav .links a:hover {
   color: var(--clr-secondary);
 }
-/* .fixed-nav .links-container {
+.fixed-nav .links-container {
   height: auto !important;
-} */
+}
 .nav-header {
   display: flex;
   align-items: center;
@@ -176,19 +201,26 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--clr-grey-1);
+  color: var(--grey-clr);
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
 }
+.nav-btn {
+  background-color: var(--secondary-clr);
+  color: var(--off-white);
+  border: none;
+  padding: 0.7rem 2rem;
+}
 .nav-toggle:hover {
-  color: var(--clr-secondary);
+  color: var(--secondary-clr);
 }
 .logo {
-  height: 50px;
+  height: 100px;
 }
-.links-container {
+.links-container,
+.contact-btn {
   height: 0;
   overflow: hidden;
   transition: var(--transition);
@@ -197,7 +229,7 @@ nav {
   height: 200px;
 }
 .links a {
-  background: var(--clr-white);
+  background: var(--off-white);
   color: var(--clr-grey-5);
   font-size: 1.1rem;
   text-transform: capitalize;
@@ -208,7 +240,7 @@ nav {
   padding: 0.75rem 0;
 }
 .links a:hover {
-  color: var(--clr-grey-1);
+  color: var(--grey-clr);
 }
 @media screen and (min-width: 800px) {
   nav {
@@ -228,7 +260,8 @@ nav {
   .nav-toggle {
     display: none;
   }
-  .links-container {
+  .links-container,
+  .contact-btn {
     height: auto !important;
   }
   .links {
@@ -236,7 +269,7 @@ nav {
   }
   .links a {
     background: transparent;
-    color: var(--clr-white);
+    color: var(--off-white);
     font-size: 1.1rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
@@ -247,7 +280,127 @@ nav {
     padding: 0;
   }
   .links a:hover {
-    color: var(--clr-white);
+    color: var(--off-white);
   }
 }
+
+/* hero */
+header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(63, 208, 212, 0.8), rgba(0, 0, 0, 0.9)),
+    url(../images/hero.png) center/cover no-repeat;
+}
+.banner {
+  min-height: 100vh;
+  display: grid;
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 4rem;
+}
+.container h3 {
+  font-family: var(--ff-secondary);
+  font-size: 1.5rem;
+  color: var(--off-white);
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: var(--spacing);
+}
+.container p {
+  color: var(--off-white);
+  margin: 1.5rem 0;
+  margin-bottom: 2.25rem;
+}
+
+.container .hero-btn {
+  background-color: var(--primary-clr);  
+  color: var(--off-white);
+  padding: 1rem 3rem;
+  border: none;
+  font-size: 0.7rem;
+}
+
+.container .hero-btn:hover {
+  background: transparent;
+  border: 2px solid var(--off-white);
+  transition: var(--transition);
+}
+
+@media screen and (min-width: 768px) {
+
+  header {
+    background: linear-gradient(rgba(63, 208, 212, 0.8), rgba(0, 0, 0, 0.9)),
+    url(../images/herobg.jpg) center/cover no-repeat;
+  }
+  .container p {
+    max-width: 40rem;
+  }
+
+  .container h3 {
+    font-size: 2rem;
+  }
+}
+/* sections and title */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.title span {
+  color: var(--clr-secondary);
+}
+#about,
+#services,
+#tours {
+  height: 80vh;
+}
+#services {
+  background: var(--clr-white);
+}
+footer {
+  background: var(--clr-grey-1);
+  padding: 5rem 1rem;
+}
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 0;
+}
+
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--clr-secondary);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  animation: bounce 2s ease-in-out infinite;
+
+  visibility: hidden;
+  z-index: -100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
