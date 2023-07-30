@@ -213,6 +213,11 @@ nav {
   border: none;
   padding: 0.7rem 2rem;
 }
+
+.nav-btn:hover{
+  background: var(--primary-clr);
+  color: var(--off-white);
+}
 .nav-toggle:hover {
   color: var(--secondary-clr);
 }
