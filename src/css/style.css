@@ -184,6 +184,7 @@ nav {
   width: 100%;
   background: var(--off-white);
   box-shadow: var(--light-shadow);
+  z-index: 200;
 }
 .fixed-nav .links a {
   color: var(--grey-clr);
@@ -337,6 +338,16 @@ header {
   transition: var(--transition);
 }
 
+/* whatsapp */
+.hero-section a {
+  position: absolute;
+  bottom: 100px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+}
+
+
 @media screen and (min-width: 768px) {
 
   header {
@@ -366,12 +377,67 @@ header {
   color: var(--clr-secondary);
 }
 #about,
-#services,
 #blog {
   height: 80vh;
 }
 #services {
   background: var(--clr-white);
+}
+
+#services h2 {
+  color: var(--secondary-clr);
+}
+
+#services h2 span {
+  color: var(--primary-clr);
+}
+
+#services .services-header {
+  font-family: var(--ff-secondary);
+  font-size: 2rem;
+  max-width: 300px;
+  padding-top: 2rem;
+  color: var(--clr-grey-2);
+}
+
+#services .services-sub-header {
+  color: var(--secondary-clr);
+  text-align: end;
+  padding: 1.5rem 0;
+  max-width: 600px;
+  margin-left: auto;
+}
+
+#services .services-btns {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#services .serve-btn {
+  background-color: transparent;
+  border: 1px solid var(--primary-clr);
+  color: var(--primary-clr);
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  padding: 0.7rem 1rem;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  transition: var(--transition);
+  text-align: center;
+}
+
+#services .serve-btn:hover {
+  background: var(--secondary-clr);
+  color: var(--off-white);
+}
+
+.services-banner {
+  width: 100%;
+  height: 20vh;
+  border-radius: var(--radius);
+  margin: 2rem 0;
+  background: url('../images/services_banner.jpg') center center/cover no-repeat;
 }
 footer {
   background: var(--clr-grey-1);
