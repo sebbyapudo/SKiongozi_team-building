@@ -453,7 +453,7 @@ header {
   padding-top: 1.5rem;
 }
 .services-content  .img-container {
-  width: 450px;
+  width: 23vwspx;
   border-radius: var(--radius);
   border: 1px solid black;
   order: 2;
@@ -483,6 +483,41 @@ header {
   .services-content .services-text {
     max-width: 500px;
   }
+}
+
+/* motivational talks */
+#motivation  .services-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#motivation .services-info {
+  order: 2;
+}
+
+#motivation .title {
+  color: var(--primary-clr);
+}
+
+@media screen and (min-width: 768px) {
+  #motivation  .services-content{
+    flex-direction: row;
+  }
+  #motivation .img-container {
+    order: 2;
+  }
+}
+
+/* indoor activities */
+#indoor {
+  background-color: var(--black-clr);
+}
+
+#indoor .title {
+  color: var(--primary-clr);
+}
+#indoor .services-text {
+  color: var(--off-white);
 }
 footer {
   background: var(--clr-grey-1);
