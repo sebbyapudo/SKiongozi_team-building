@@ -79,4 +79,10 @@ scrollLinks.forEach( (link) => {
   });
 });
 
+// close the navtoggle on clickking the nav-btn
+const navBtn = document.querySelector('.nav-btn');
+navBtn.addEventListener("click", () => {
+  linksContainer.classList.remove('show-links')
+})
+
 
