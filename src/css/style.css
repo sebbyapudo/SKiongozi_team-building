@@ -376,7 +376,7 @@ header {
 .title span {
   color: var(--clr-secondary);
 }
-#about,
+
 #blog {
   height: 80vh;
 }
