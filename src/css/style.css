@@ -513,12 +513,21 @@ header {
   background-color: var(--black-clr);
 }
 
-#indoor .title {
+#indoor .title,
+#outdoor .title {
   color: var(--primary-clr);
 }
 #indoor .services-text {
   color: var(--off-white);
 }
+
+@media screen and (min-width: 768px) {
+  #outdoor .services-content {
+    flex-direction: row;
+  }
+}
+
+
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
