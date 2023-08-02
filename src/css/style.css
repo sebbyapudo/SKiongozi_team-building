@@ -527,6 +527,50 @@ header {
   }
 }
 
+#holiday {
+  background: var(--primary-accent);
+}
+
+#holiday .title {
+  color: var(--primary-clr);
+}
+
+#physical {
+  background-color: var(--secondary-accent);
+}
+
+#physical .title {
+  color: var(--secondary-clr);
+}
+
+#physical .services-text {
+  color: var(--off-white);
+}
+
+@media screen and (min-width: 768px) {
+  #physical .services-content {
+    flex-direction: row;
+  }
+}
+
+#emotional {
+  background-color: var(--black-clr);
+}
+
+#emotional .title,
+#emotional .services-text {
+  color: var(--off-white);
+}
+
+#games .title{
+  color: var(--black-clr);
+}
+
+@media screen and (min-width: 768px) {
+  #games .services-content {
+    flex-direction: row;
+  }
+}
 
 footer {
   background: var(--clr-grey-1);
