@@ -388,9 +388,8 @@ header {
   color: var(--clr-secondary);
 }
 
-#blog,
-#contact {
-  height: 100vh;
+#blog {
+  height: 80vh;
 }
 #services {
   background: var(--clr-white);
@@ -584,12 +583,13 @@ header {
   }
 }
 
-.contact-form {
-  position: relative;
-  top: 60px;
-  width: 400px;
+.contact-form .card {
+  /* position: relative;
+  top: 60px; */
+  width: 430px;
   padding: 40px;
   z-index: 100;
+  margin-bottom: 20px;
 }
 
 .contact-form input[type="text"],
@@ -612,7 +612,51 @@ color: var(--off-white);
 .contact-form .nav-btn:hover {
   background-color: var(--off-white);
   color: var(--primary-clr);
+}
 
+#contact h3 {
+  color: var(--grey-clr);
+  padding-top: 20px;
+  letter-spacing: var(--spacing);
+}
+
+#contact .contacts {
+  padding: 10px 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .contacts h4 {
+  font-size: 1.5rem;
+}
+
+#contact .contacts i {
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+#contact .single-contact p,
+#contact .single-contact i {
+  padding: 10px 0;
+}
+
+#contact .contact-info {
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  #contact .contact-info {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 5rem;
+  }
+
+  .contacts h3 {
+    padding-bottom: 40px;
+  }
 }
 
 
