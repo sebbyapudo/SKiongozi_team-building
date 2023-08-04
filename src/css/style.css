@@ -330,7 +330,7 @@ header {
 }
 .container p {
   color: var(--off-white);
-  margin: 1rem 0;
+  margin: 2rem 0;
   margin-bottom: 2.25rem;
   line-height: 1.3;
 }
@@ -353,6 +353,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding-top: 1rem;
 }
 
 /* whatsapp */
@@ -373,7 +377,7 @@ header {
   }
   .container p {
     max-width: 40rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
     line-height: 1.5;
   }
 
@@ -620,7 +624,7 @@ color: var(--off-white);
 #contact h3 {
   color: var(--grey-clr);
   padding-top: 20px;
-  letter-spacing: var(--spacing);
+  letter-spacing: 0.15rem;
 }
 
 #contact .contacts {
@@ -654,7 +658,11 @@ color: var(--off-white);
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    gap: 5rem;
+    gap: 7rem;
+  }
+
+  .contacts {
+    align-self: start;
   }
 
   .contacts h3 {
