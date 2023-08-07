@@ -402,8 +402,8 @@ header {
   background: var(--clr-white);
 }
 
-#services h2 {
-  color: var(--secondary-clr);
+#services img {
+  transition: var(--transition);
 }
 
 #services h2 span {
@@ -470,6 +470,14 @@ header {
   gap: 1rem;
   padding-top: 1.5rem;
 }
+
+.services-content img {
+  transition: var(--transition);
+}
+
+.services-content img:hover{
+  opacity: 0.6;
+}
 .services-content  .img-container {
   width: 23;
   border-radius: var(--radius);
@@ -493,8 +501,6 @@ header {
   }
   .services-content  .img-container {
     order: 1;
-    /* flex-grow: 1; */
-    /* height: 200px; */
     width: 600px;
   }
 
@@ -692,6 +698,16 @@ color: var(--off-white);
 #blog .img-container {
   width: 350px;
   height: 200px;
+}
+
+#blog img {
+  transition: var(--transition);
+}
+
+#blog img:hover {
+  opacity: 0.5;
+  transform: rotate(4deg);
+  /* transform: scale(1.1); */
 }
 
 @media screen and (min-width: 768px){
