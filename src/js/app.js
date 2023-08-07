@@ -85,4 +85,26 @@ navBtn.addEventListener("click", () => {
   linksContainer.classList.remove('show-links')
 })
 
+// Render blog 
+function renderBlog() {
+  const blogContainer = document.querySelector('.blog-container')
+  blog.forEach( (item) => {
+    blogContainer.innerHTML += `
+    <!-- single blog -->
+    <div class="single-blog">
+      <div class="img-container">
+        <img src=${item.img} alt=${item.id}>
+      </div>
+      <div class="blog-title">
+        <h4 class="title">${item.title}</h4>
+        <p class="blog-text">
+          ${item.desc}
+        </p>
+      </div>
+    </div>
+    <!-- end of single blog -->
+    `
+  } )
+}
 
+console.log(renderBlog())
