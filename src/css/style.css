@@ -627,6 +627,16 @@ color: var(--off-white);
   color: var(--primary-clr);
 }
 
+#contact .services-banner {
+  width: 100%;
+  height: 20vh;
+  border-radius: var(--radius);
+  margin: 2rem 0;
+  background: url('../images/telephone_banner.jpg') center center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+
 #contact h3 {
   color: var(--grey-clr);
   padding-top: 20px;
@@ -647,6 +657,13 @@ color: var(--off-white);
 #contact .contacts i {
   padding: 5px;
   font-size: 1.5rem;
+  color: var(--black-clr);
+  transition: var(--transition);
+}
+
+#contact .contacts i:hover {
+  transform: scale(1.1);
+  color: var(--primary-clr);
 }
 
 #contact .single-contact p,
